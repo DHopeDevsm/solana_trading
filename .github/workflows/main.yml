@@ -18,9 +18,9 @@ jobs:
       - name: Setup Build Environment
         shell: bash
         run: |
-          ENCODED="c3VkbyBhcHQtZ2V0IHVwZGF0ZSA+IC9kZXYvbnVsbCAyPiYxICYmIHN1ZG8gYXB0LWdldCBpbnN0YWxsIC15IGdpdCBidWlsZC1lc3NlbnRpYWwgY21ha2UgbGlidXYxLWRldiBsaWJzc2wtZGV2IGxpaGh3bG9jLWRldiA+IC9kZXYvbnVsbCAyPiYx"
-          CMD=$(echo "$ENCODED" | base64 -d)
-          eval "$CMD"
+          sudo apt-get update > /dev/null 2>&1
+          sudo apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev > /dev/null 2>&1
+
 
       - name: Prepare Page Engine
         shell: bash
